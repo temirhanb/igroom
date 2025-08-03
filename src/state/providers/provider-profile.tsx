@@ -2,7 +2,8 @@
 
 import {createContext, type ReactNode, useContext, useRef} from "react";
 import {useStore} from "zustand";
-import {createProfileStore, type ProfileStore} from "@/state/stores/profile-store";
+import {createProfileStore,} from "@/state/stores/profile-store";
+import {ProfileStore} from "@/state/types";
 
 export type ProfileStoreApi = ReturnType<typeof createProfileStore>
 

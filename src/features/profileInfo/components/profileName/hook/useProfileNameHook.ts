@@ -1,7 +1,7 @@
 import {useProfileStore} from "@/state/providers/provider-profile";
 import moment from "moment/moment";
 
-export const useProfileNameHook = ()=>{
+export const useProfileNameHook = () => {
   const {data} = useProfileStore(state => state);
 
   const {name, role, nickname, last_login_at} = data;
@@ -10,5 +10,5 @@ export const useProfileNameHook = ()=>{
 
   const lastActive = currentData.diff(lastLogin, "days");
 
-  return {name,role,nickname,lastActive,last_login_at,name}
-}
+  return {name, role, nickname, lastActive, last_login_at, nameUser: name};
+};

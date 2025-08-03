@@ -29,9 +29,9 @@ export const Footer = () => {
   return (
     <div className={"mt-[20px] px-[30px] py-[10px] flex flex-row justify-between bg-[#e5e5e5]"}>
       {footerLinks.map((item, index) => (
-        <Link href={item.src}>
+        <Link key={item.src + index} href={item.src}>
           <button
-            key={item.src + index}
+
             className={"flex items-center cursor-pointer hover:opacity-75"}>
             <img src={item.img} alt=""/>
           </button>

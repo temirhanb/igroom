@@ -1,16 +1,20 @@
+import {useProfileStore} from "@/state/providers/provider-profile";
+
 export const CountInvites = () => {
+  const {data: {calling_limit, going_limit}} = useProfileStore(state => state);
+
   const invites = [
     {
       id: 123,
       name: "Зовы",
       status: "ready",
-      count: 7
+      count: calling_limit === undefined ? 7 : calling_limit
     },
     {
       id: 1123,
       name: "Иду",
       status: "pending",
-      count: 5
+      count: going_limit === undefined ? 7 : going_limit
     },
   ];
   return (
@@ -31,7 +35,8 @@ export const CountInvites = () => {
               </span>
             </div>
           </div>
-          <img src="/bottom-arrow.svg" className={"h-[18px] w-[31px]"} alt="arrow bottom"/>
+          <img src="/bottom-arrow.svg" className={"h-[18px] cursor-pointer hover:opacity-75 w-[31px]"}
+               alt="arrow bottom"/>
         </div>
       ))}
     </div>

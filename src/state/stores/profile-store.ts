@@ -1,6 +1,6 @@
 // src/stores/counter-store.ts
-import {create} from "zustand/react";
 import {createStore} from "zustand/vanilla";
+import axios from "axios";
 
 export type TProfile = {
   id: string,
@@ -29,7 +29,7 @@ export type ProfileState = {
 }
 
 export type ProfileActions = {
-  fetch: (aaa: any) => void
+  fetch: () => Promise<void>
 }
 
 export type ProfileStore = ProfileState & ProfileActions
@@ -38,11 +38,15 @@ export const defaultInitState: ProfileState = {
   data: {} as TProfile,
 };
 
-export const createProfileStore = createStore<ProfileState>()((set) => ({
-  ...defaultInitState,
-  fetch: async () => {
-    const response = await fetch('/api/data');
-    const result = await response.json();
-    set({ data: result });
-  },
-}));
+export const createProfileStore = (
+  initState: ProfileState = defaultInitState,
+) => {
+  return createStore<ProfileStore>()((set) => ({
+    ...initState,
+    fetch: async () => {
+      const {data} = await axios.get("https://igroom.ru/api/v2/profile/5e800be0-088e-41cb-b549-10ebf4a13591");
+      const result = await data;
+      set({data: {...result.data}});
+    },
+  }));
+};

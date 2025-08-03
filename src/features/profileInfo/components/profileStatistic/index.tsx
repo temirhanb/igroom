@@ -5,7 +5,7 @@ export const ProfileStatistic = () => {
 
   const {data} = useProfileStore(state => state);
 
-  const {created_at, points} = data;
+  const {created_at, points, roomersCount} = data;
   const currentData: moment.Moment = moment();
   const lastLogin: moment.Moment = moment(created_at);
 
@@ -17,7 +17,7 @@ export const ProfileStatistic = () => {
     }, {
       count: points === undefined ? 10 : points, name: "встреч"
     }, {
-      count: "350", name: "румеров"
+      count: roomersCount === undefined ? "350" : roomersCount, name: "румеров"
     },
 
   ];

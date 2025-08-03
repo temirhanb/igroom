@@ -24,7 +24,7 @@ export const ProfileAvatar = () => {
             {role === undefined ? "Р" : role.split("")[0]}
           </p>
         </div>
-        <img src={avatar_url === undefined ? "/user-foto.svg" : avatar_url} alt=""/>
+        <img className={"rounded-full"} src={avatar_url === undefined ? "/user-foto.svg" : avatar_url} alt=""/>
       </div>
       <div className={"mr-[15px] flex flex-col items-center justify-center"}>
         <div className={"mb-[25px] cursor-pointer hover:opacity-75"}><img src="/update-icon.svg" alt=""/></div>

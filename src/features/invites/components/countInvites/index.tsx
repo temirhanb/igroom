@@ -1,22 +1,7 @@
-import {useProfileStore} from "@/state/providers/provider-profile";
+import {useCountInvitesHook} from "@/features/invites/hook/useCountInvitesHook";
 
 export const CountInvites = () => {
-  const {data: {calling_limit, going_limit}} = useProfileStore(state => state);
-
-  const invites = [
-    {
-      id: 123,
-      name: "Зовы",
-      status: "ready",
-      count: calling_limit === undefined ? 7 : calling_limit
-    },
-    {
-      id: 1123,
-      name: "Иду",
-      status: "pending",
-      count: going_limit === undefined ? 7 : going_limit
-    },
-  ];
+  const {invites} = useCountInvitesHook();
   return (
     <div className={"p-[16px] bg-white rounded-[25px] mt-[20px]"}>
       {invites.map(item => (

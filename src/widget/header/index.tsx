@@ -1,12 +1,7 @@
-import {useProfileStore} from "@/state/providers/provider-profile";
-import {useEffect} from "react";
+import {useHeaderProfileHook} from "@/widget/header/hook";
 
 export const HeaderProfile = () => {
-  const {data, fetch} = useProfileStore(state => state);
-
-  useEffect(() => {
-    fetch().then();
-  }, []);
+  useHeaderProfileHook();
 
   return (
     <header

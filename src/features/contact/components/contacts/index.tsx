@@ -1,8 +1,7 @@
-import {useProfileStore} from "@/state/providers/provider-profile";
+import {useContactsHook} from "@/features/contact/hook/useContactsHook";
 
 export const Contacts = () => {
-  const {data} = useProfileStore(state => state);
-  const {telegram} = data;
+  const {telegram} = useContactsHook();
   return (
     <div
       className={"mx-[16px] text-[17px] border-t border-[#00000033] h-[60px] flex flex-row items-center justify-between"}>

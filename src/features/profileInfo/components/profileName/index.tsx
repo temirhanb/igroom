@@ -1,15 +1,9 @@
 import moment from "moment";
-
-import {useProfileStore} from "@/state/providers/provider-profile";
+import {useProfileNameHook} from "@/features/profileInfo/components/profileName/hook/useProfileNameHook";
 
 export const ProfileName = () => {
-  const {data} = useProfileStore(state => state);
 
-  const {name, role, nickname, last_login_at} = data;
-  const currentData: moment.Moment = moment();
-  const lastLogin: moment.Moment = moment(last_login_at);
-
-  const lastActive = currentData.diff(lastLogin, "days");
+  const {role, nickname, lastActive, last_login_at} = useProfileNameHook();
 
   return (
     <>

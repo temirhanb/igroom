@@ -1,8 +1,7 @@
-import {useProfileStore} from "@/state/providers/provider-profile";
+import {useDescriptionHook} from "@/features/contact/hook/useDescriptionHook";
 
 export const Description = () => {
-  const {data: {about}} = useProfileStore(state => state);
-
+  const {about} = useDescriptionHook();
   return (
     <div
       className={"p-[16px]"}

@@ -1,5 +1,10 @@
-export const Rooms = ()=>{
-  return(
-    <div>rooms</div>
-  )
-}
+import {RoomsInvites} from "@/features/rooms/components/roomsInvites";
+
+export const Rooms = () => {
+
+  return (
+    <>
+      <RoomsInvites/>
+    </>
+  );
+};

@@ -1,19 +1,10 @@
+import React from "react";
 import type {Metadata} from "next";
-import {Geist, Geist_Mono, Roboto} from "next/font/google";
+import localFont from "next/font/local";
 import "../shared/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const roboto = Roboto({
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const sfPro = localFont({
+  src: "../shared/fonts/SF-Pro-Display-Regular.otf"
 });
 
 export const metadata: Metadata = {
@@ -27,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en" className={sfPro.className}>
     <body
-      className={"font-[roboto] "}
+      className={"font-[sf{ro] "}
     >
     {children}
     </body>

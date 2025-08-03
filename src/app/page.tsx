@@ -4,9 +4,10 @@ import ProfilePage from "@/app/profile/page";
 export default function Home() {
 
   return (
-    <div
-      className="">
+    <>
+      {/*<ProfileStoreProvider>*/}
       <ProfilePage/>
-    </div>
+      {/*</ProfileStoreProvider>*/}
+    </>
   );
 }

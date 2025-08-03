@@ -10,5 +10,5 @@ export const useProfileNameHook = ()=>{
 
   const lastActive = currentData.diff(lastLogin, "days");
 
-  return {name,role,nickname,lastActive,last_login_at}
+  return {name,role,nickname,lastActive,last_login_at,name}
 }

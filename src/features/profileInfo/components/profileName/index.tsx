@@ -3,7 +3,7 @@ import {useProfileNameHook} from "@/features/profileInfo/components/profileName/
 
 export const ProfileName = () => {
 
-  const {role, nickname, lastActive, last_login_at} = useProfileNameHook();
+  const {role, nickname, lastActive, last_login_at, name} = useProfileNameHook();
 
   return (
     <>

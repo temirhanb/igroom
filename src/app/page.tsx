@@ -1,13 +1,12 @@
 import React from "react";
-import ProfilePage from "@/app/profile/page";
+import {redirect, RedirectType} from "next/navigation";
 
 export default function Home() {
 
+  redirect("/profile", RedirectType.replace);
   return (
     <>
-      {/*<ProfileStoreProvider>*/}
-      <ProfilePage/>
-      {/*</ProfileStoreProvider>*/}
+      <h1>Home page</h1>
     </>
   );
 }

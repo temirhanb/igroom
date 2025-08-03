@@ -12,7 +12,7 @@ export const FollowButton: React.FC<IProps> = ({
   return (
 
     <button
-      className={"mx-[16px] first:border-b last:border-t last:border-[#00000033] first:border-[#00000033] flex items-center py-[19px]"}>
+      className={"mx-[16px]  first:border-none border-t border-[#00000033] flex items-center py-[19px]"}>
       <div className={"w-[35px] flex items-center justify-center"}>
         <img src={img} alt={name}/>
       </div>

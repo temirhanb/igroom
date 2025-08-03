@@ -1,5 +1,14 @@
+import React from "react";
+import {LearnButton} from "@/features";
+
 export const Learn = () => {
+
+  const learnItems = ["Возможновти ИГРУМА", "Правила ИГРУМА", "Инструкция РУМЕРА", "Инструкция МАСТЕРА", "Инструкция МЕСТА", "Пользовательское соглашение"];
   return (
-    <div>learn</div>
+    <div className={"mt-[20px] rounded-[25px] bg-white flex flex-col"}>
+      {learnItems.map((item, index) => (
+        <LearnButton item={item} key={item + index}/>
+      ))}
+    </div>
   );
 };

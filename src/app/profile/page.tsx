@@ -13,17 +13,19 @@ import {CreateIgroom} from "@/widget/createIgroom";
 export default function ProfilePage() {
 
   return (
-    <div className={"bg-[#eeeeee] flex flex-col  px-[10px]"}>
+    <div className={"bg-[#eeeeee] flex flex-col  "}>
       <HeaderProfile/>
-      <ProfileInfo/>
-      <Invites/>
-      <CreateIgroom/>
-      <History/>
-      <AccountSetting/>
-      <Follows/>
-      <Contact/>
-      <Learn/>
-      <QuitButton/>
+      <div className={"px-[10px]"}>
+        <ProfileInfo/>
+        <Invites/>
+        <CreateIgroom/>
+        <History/>
+        <AccountSetting/>
+        <Follows/>
+        <Contact/>
+        <Learn/>
+        <QuitButton/>
+      </div>
       <Footer/>
     </div>);
 }

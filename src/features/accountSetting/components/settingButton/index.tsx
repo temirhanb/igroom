@@ -10,7 +10,7 @@ export const SettingButton: React.FC<IProps> = ({
                                                   img
                                                 }) => {
   return (
-    <button className={"mx-[16px] first:border-b first:border-[#00000033] flex items-center py-[19px]"}>
+    <button className={"mx-[16px]  first:border-none border-t border-[#00000033] flex items-center py-[19px]"}>
       <div className={"w-[35px] flex items-center justify-center"}>
         <img src={img} alt={name}/>
       </div>

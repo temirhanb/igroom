@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "docker": "docker build . -t igrum",
+    "docker": "docker build . -t igrum && docker run -p 3000:3000 igrum",
     "docker:run": "docker run -p 3000:3000 igrum"
   },
   "dependencies": {

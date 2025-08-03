@@ -1,4 +1,4 @@
-export const RoomsInvites = () => {
+export const CountInvites = () => {
   const invites = [
     {
       id: 123,
@@ -17,6 +17,7 @@ export const RoomsInvites = () => {
     <div className={"p-[16px] bg-white rounded-[25px] mt-[20px]"}>
       {invites.map(item => (
         <div
+          key={item.id}
           className={"first:border-b first:border-[#00000033]  flex justify-between items-center flex-row first:pb-[18px] last:pt-[18px]"}>
           <div
             className={`rounded-full w-[13px] h-[13px] ${item.status === "ready" ? "bg-[#00CF00]" : "bg-[#FFA100]"}`}/>

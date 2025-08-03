@@ -9,6 +9,12 @@ npm i
 yarn 
 ```
 
+# docker
+```
+npm run docker
+npm run docker:run
+```
+
 First, run the development server:
 
 ```bash
